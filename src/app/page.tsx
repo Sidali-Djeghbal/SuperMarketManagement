@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import StaffManagement from "@/components/Staff/StaffManagement";
-import type { Employee } from "@/types/Employee";
+import type { Employee } from "@/types/Entities";
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState<string>("");
