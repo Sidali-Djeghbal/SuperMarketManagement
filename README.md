@@ -1,97 +1,73 @@
 # SuperMarket Management System
 
-A modern web application for managing supermarket staff and equipment, built with Next.js and TypeScript.
+A comprehensive staff and machine management solution for supermarkets with shift scheduling capabilities.
 
-## Features
+## Key Features
 
-### Staff Management
+- **Staff Management**:
 
-- Add and remove workers and cashiers
-- Track employee information (name, email, phone)
-- Manage cashier-machine assignments
-- Monitor employee status (active/inactive)
+  - Add, view, and remove cashiers with secure credentials
+  - Toggle password visibility for verification
+  - Responsive list and grid views
 
-### Machine Management
+- **Machine Tracking**:
 
-- Add and remove machines
-- Track machine numbers and status
-- Grid-based machine overview
+  - Register and manage cash register machines
+  - Visual machine status indicators
 
-## Tech Stack
+- **Shift Scheduling**:
 
-- **Frontend Framework**: Next.js 14
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **State Management**: React Hooks
+  - Assign cashiers to machines with start/end times
+  - View current shift assignments
+
+- **Modern UI**:
+  - Dark theme interface with intuitive controls
+  - Real-time clock display
+  - Responsive design for all devices
+
+## Technology Stack
+
+- **Frontend**:
+
+  - Next.js (App Router)
+  - TypeScript
+  - Tailwind CSS
+  - React Hooks
+
+- **State Management**:
+  - React useState for local state
+  - Context API (if applicable)
+
+## Project Structure
+
+```
+src/
+├── app/               # Main application pages
+│   ├── layout.tsx     # Root layout
+│   └── page.tsx       # Home page with staff management
+├── components/        # Reusable components
+│   └── Staff/         # Staff management components
+│       ├── StaffManagement.tsx  # Main staff interface
+│       └── ShiftManagement.tsx  # Shift scheduling
+└── types/             # Type definitions
+    ├── Entities.ts    # Employee and Machine types
+    └── Shift.ts       # Shift type definitions
+```
 
 ## Getting Started
-
-### Prerequisites
-
-- Node.js (v18 or higher)
-- npm or yarn package manager
-
-### Installation
 
 1. Clone the repository
 2. Install dependencies:
    ```bash
    npm install
    ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-### Development
+## Screenshots
 
-Run the development server:
+![Staff Management Interface](/public/Screenshot_21-4-2025_15305_localhost.jpeg)
 
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Building for Production
-
-```bash
-npm run build
-npm start
-```
-
-## Project Structure
-
-```
-src/
-  ├── app/              # Next.js app directory
-  ├── components/       # React components
-  │   ├── Staff/       # Staff management components
-  │   └── UI/          # Reusable UI components
-  └── types/           # TypeScript type definitions
-```
-
-## Features Overview
-
-### Staff Management Component
-
-- **Worker Management**:
-
-  - Add new workers with name, email, and phone
-  - Track worker status
-  - Remove workers from the system
-
-- **Cashier Management**:
-
-  - Add cashiers with machine assignments
-  - Track cashier details and status
-  - Remove cashiers from the system
-
-- **Machine Management**:
-  - Add new machines with unique numbers
-  - Track machine status
-  - Remove machines from the system
-
-## UI/UX Features
-
-- Modern dark theme interface
-- Responsive grid and list layouts
-- Interactive forms with validation
-- Status indicators for machines and employees
-- Smooth transitions and hover effects
